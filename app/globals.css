@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Border beam effect */
+  .border-beam {
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .border-beam::before,
+  .border-beam::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 8px;
+    padding: 1px;
+    background: #2A2A2A;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .border-beam::after {
+    background: linear-gradient(
+      90deg,
+      #2A2A2A 0%,
+      #9d4edd 25%,
+      #c77dff 50%,
+      #9d4edd 75%,
+      #2A2A2A 100%
+    );
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loader {
+    text-align: left;
+    display: flex;
+    gap: 3px;
+  }
+
+  .loader span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    animation: loader 0.6s infinite alternate;
+  }
+
+  .loader span:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+
+  .loader span:nth-of-type(3) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes loader {
+    0% {
+      opacity: 1;
+      transform: scale(0.6);
+    }
+
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      90deg,
+      #a855f7 0%,
+      #8b5cf6 50%,
+      #a855f7 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.4),
+                 0 0 20px rgba(139, 92, 246, 0.2);
+    font-weight: 600;
+  }
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+body {
+  margin: 0px !important;
+}
