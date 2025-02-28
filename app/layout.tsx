@@ -5,19 +5,19 @@ import "./globals.css";
 
 const inter = Lexend({ subsets: ["latin"] });
 
-let title = "Turbo Seek – AI Search Engine";
+let title = "Nexa Search – Unlock the Universe of Knowledge";
 let description =
-  "Search smarter and faster with our open source AI search engine";
-let url = "https://nexasearch.io/";
-let ogimage = "https://nexasearch.io/og-image.png";
-let sitename = "nexasearch.io";
+  "Unlock the Universe of Knowledge";
+let url = "https://nexasearch-three.vercel.app/";
+let ogimage = "../public/favicon.png";
+let sitename = "https://nexasearch-three.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
   icons: {
-    icon: "/favicon.ico",
+    icon: "./favicon/favicon.ico",
   },
   openGraph: {
     images: [ogimage],
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <PlausibleProvider domain="nexasearch.io" />
+        <PlausibleProvider domain="nexasearch-three.vercel.app/" />
       </head>
       <body
         className={`${inter.className} flex min-h-screen flex-col justify-between bg-dark-bg-primary text-dark-text-primary`}

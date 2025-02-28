@@ -23,7 +23,7 @@ const Hero: FC<THeroProps> = ({
       <div className="mx-auto w-full max-w-[900px] px-4">
         <div className="flex flex-col items-center space-y-8">
           <h2 className="gradient-text text-center text-4xl leading-[normal] lg:text-[3.5rem]">
-          Unlock the Universe of Knowledge
+            Unlock the Universe of Knowledge
           </h2>
 
           {/* input section */}
@@ -39,7 +39,7 @@ const Hero: FC<THeroProps> = ({
           <div className="flex flex-wrap items-center justify-center gap-2.5 lg:flex-nowrap lg:justify-normal">
             {suggestions.map((item) => (
               <div
-                className="flex h-[50px] cursor-pointer items-center justify-center gap-[5px] rounded-lg border border-solid border-dark-border bg-dark-bg-secondary px-2.5 py-2 hover:border-dark-accent-primary transition-colors"
+                className="flex h-[50px] cursor-pointer items-center justify-center gap-[5px] rounded border border-solid border-dark-border bg-dark-bg-secondary px-2.5 py-2 hover:border-dark-accent-primary transition-colors"
                 onClick={() => handleClickSuggestion(item?.name)}
                 key={item.id}
               >
@@ -48,6 +48,7 @@ const Hero: FC<THeroProps> = ({
                   src={item.icon}
                   alt={item.name}
                   width={18}
+                  
                   height={16}
                   className="w-[18px]"
                 />
@@ -87,7 +88,7 @@ const suggestions: suggestionType[] = [
   {
     id: 1,
     name: "What is consciousness?",
-    icon: "/img/icon _leaf_.svg",
+    icon: "/img/leaf.svg",
   },
   {
     id: 2,
