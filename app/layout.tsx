@@ -8,9 +8,9 @@ const inter = Lexend({ subsets: ["latin"] });
 let title = "Turbo Seek – AI Search Engine";
 let description =
   "Search smarter and faster with our open source AI search engine";
-let url = "https://turboseek.io/";
-let ogimage = "https://turboseek.io/og-image.png";
-let sitename = "TurboSeek.io";
+let url = "https://nexasearch.io/";
+let ogimage = "https://nexasearch.io/og-image.png";
+let sitename = "nexasearch.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <PlausibleProvider domain="turboseek.io" />
+        <PlausibleProvider domain="nexasearch.io" />
       </head>
       <body
         className={`${inter.className} flex min-h-screen flex-col justify-between bg-dark-bg-primary text-dark-text-primary`}

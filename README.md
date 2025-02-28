@@ -1,6 +1,6 @@
-<a href="https://www.turboseek.io">
+<a href="https://www.nexasearch.io">
   <img alt="Turbo Seek" src="./public/og-image.png">
-  <h1 align="center">TurboSeek</h1>
+  <h1 align="center">nexasearch</h1>
 </a>
 
 <p align="center">
