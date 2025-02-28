@@ -43,15 +43,7 @@ const Hero: FC<THeroProps> = ({
                 onClick={() => handleClickSuggestion(item?.name)}
                 key={item.id}
               >
-                <Image
-                  unoptimized
-                  src={item.icon}
-                  alt={item.name}
-                  width={18}
-                  
-                  height={16}
-                  className="w-[18px]"
-                />
+                {item.icon}
                 <span className="text-sm font-light leading-[normal] text-white">
                   {item.name}
                 </span>
@@ -81,24 +73,78 @@ const Hero: FC<THeroProps> = ({
 type suggestionType = {
   id: number;
   name: string;
-  icon: string;
+  icon: JSX.Element;
 };
 
 const suggestions: suggestionType[] = [
   {
     id: 1,
     name: "What is consciousness?",
-    icon: "/img/leaf.svg",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-leaf"
+      >
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+      </svg>
+    ),
   },
   {
     id: 2,
     name: "Explain the theory of relativity?",
-    icon: "/img/icon _dumbell_.svg",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-brain"
+      >
+        <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+        <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+        <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+        <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+        <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+        <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+        <path d="M6 18a4 4 0 0 1-1.967-.516" />
+        <path d="M19.967 17.484A4 4 0 0 1 18 18" />
+      </svg>
+    ),
   },
   {
     id: 3,
     name: "Explain stoic philosophy?",
-    icon: "/img/icon _atom_.svg",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-flame"
+      >
+        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+      </svg>
+    ),
   },
 ];
 
